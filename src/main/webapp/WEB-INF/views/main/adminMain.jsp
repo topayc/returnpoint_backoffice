@@ -559,7 +559,7 @@
                             </li> 
                             
                             <li class = "H manage" data-options = "iconCls :'icon-info'">
-                            	 <span  class = "H manage"  style = "font-weight : bold">푸시 및 메일링 서비스</span>
+                            	 <span  class = "H manage"  style = "font-weight : bold">마케팅 서비스</span>
 		                         <ul>
    									<li class = "H_1 manage" id = "managePush"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "managePush"  node = "5"  menu_deps= '2' >
 		                        		<span style = "font-weight : bold">디바이스 PUSH </span>
