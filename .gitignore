@@ -1,0 +1,13 @@
+/target/
+/.settings/
+/.springBeans
+/bin/
+/doc
+/settings
+/.classpath
+/.factorypath
+/.project
+affiliate_sales.properties
+capital_point_policy.properties
+config.properties
+database.properties

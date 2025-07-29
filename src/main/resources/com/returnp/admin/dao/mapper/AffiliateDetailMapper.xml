@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.returnp.admin.dao.mapper.AffiliateDetailMapper">
+  <resultMap id="BaseResultMap" type="com.returnp.admin.model.AffiliateDetail">
+    <id column="affiliateDetailNo" jdbcType="INTEGER" property="affiliateDetailNo" />
+    <result column="affiliateNo" jdbcType="INTEGER" property="affiliateNo" />
+    <result column="businessNumber" jdbcType="VARCHAR" property="businessNumber" />
+    <result column="businessItem" jdbcType="VARCHAR" property="businessItem" />
+    <result column="buisnessName" jdbcType="VARCHAR" property="buisnessName" />
+    <result column="businessType" jdbcType="VARCHAR" property="businessType" />
+    <result column="overview" jdbcType="VARCHAR" property="overview" />
+    <result column="afffiliateNotice" jdbcType="VARCHAR" property="afffiliateNotice" />
+    <result column="holiday" jdbcType="VARCHAR" property="holiday" />
+    <result column="openingHours" jdbcType="VARCHAR" property="openingHours" />
+    <result column="commonWeb" jdbcType="VARCHAR" property="commonWeb" />
+    <result column="etcLink" jdbcType="VARCHAR" property="etcLink" />
+    <result column="affiliateNews" jdbcType="VARCHAR" property="affiliateNews" />
+    <result column="etc" jdbcType="VARCHAR" property="etc" />
+    <result column="affiliateMainImage1" jdbcType="VARCHAR" property="affiliateMainImage1" />
+    <result column="affiliateMainImage2" jdbcType="VARCHAR" property="affiliateMainImage2" />
+    <result column="affiliateMainImage3" jdbcType="VARCHAR" property="affiliateMainImage3" />
+    <result column="affiliateMainImage4" jdbcType="VARCHAR" property="affiliateMainImage4" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    affiliateDetailNo, affiliateNo, businessNumber, businessItem, buisnessName, businessType, 
+    overview, afffiliateNotice, holiday, openingHours, commonWeb, etcLink, affiliateNews, 
+    etc, affiliateMainImage1, affiliateMainImage2, affiliateMainImage3, affiliateMainImage4, 
+    createTime, updateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from affiliate_detail
+    where affiliateDetailNo = #{affiliateDetailNo,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from affiliate_detail
+    where affiliateDetailNo = #{affiliateDetailNo,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.returnp.admin.model.AffiliateDetail">
+    insert into affiliate_detail (affiliateDetailNo, affiliateNo, businessNumber, 
+      businessItem, buisnessName, businessType, 
+      overview, afffiliateNotice, holiday, 
+      openingHours, commonWeb, etcLink, 
+      affiliateNews, etc, affiliateMainImage1, 
+      affiliateMainImage2, affiliateMainImage3, 
+      affiliateMainImage4, createTime, updateTime
+      )
+    values (#{affiliateDetailNo,jdbcType=INTEGER}, #{affiliateNo,jdbcType=INTEGER}, #{businessNumber,jdbcType=VARCHAR}, 
+      #{businessItem,jdbcType=VARCHAR}, #{buisnessName,jdbcType=VARCHAR}, #{businessType,jdbcType=VARCHAR}, 
+      #{overview,jdbcType=VARCHAR}, #{afffiliateNotice,jdbcType=VARCHAR}, #{holiday,jdbcType=VARCHAR}, 
+      #{openingHours,jdbcType=VARCHAR}, #{commonWeb,jdbcType=VARCHAR}, #{etcLink,jdbcType=VARCHAR}, 
+      #{affiliateNews,jdbcType=VARCHAR}, #{etc,jdbcType=VARCHAR}, #{affiliateMainImage1,jdbcType=VARCHAR}, 
+      #{affiliateMainImage2,jdbcType=VARCHAR}, #{affiliateMainImage3,jdbcType=VARCHAR}, 
+      #{affiliateMainImage4,jdbcType=VARCHAR}, NOW(), NOW()
+      )
+      
+          <selectKey keyProperty="affiliateDetailNo" resultType="java.lang.Integer" order ="AFTER">
+		    SELECT LAST_INSERT_ID()
+	 </selectKey>	
+  </insert>
+  <insert id="insertSelective" parameterType="com.returnp.admin.model.AffiliateDetail">
+    insert into affiliate_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="affiliateDetailNo != null">
+        affiliateDetailNo,
+      </if>
+      <if test="affiliateNo != null">
+        affiliateNo,
+      </if>
+      <if test="businessNumber != null">
+        businessNumber,
+      </if>
+      <if test="businessItem != null">
+        businessItem,
+      </if>
+      <if test="buisnessName != null">
+        buisnessName,
+      </if>
+      <if test="businessType != null">
+        businessType,
+      </if>
+      <if test="overview != null">
+        overview,
+      </if>
+      <if test="afffiliateNotice != null">
+        afffiliateNotice,
+      </if>
+      <if test="holiday != null">
+        holiday,
+      </if>
+      <if test="openingHours != null">
+        openingHours,
+      </if>
+      <if test="commonWeb != null">
+        commonWeb,
+      </if>
+      <if test="etcLink != null">
+        etcLink,
+      </if>
+      <if test="affiliateNews != null">
+        affiliateNews,
+      </if>
+      <if test="etc != null">
+        etc,
+      </if>
+      <if test="affiliateMainImage1 != null">
+        affiliateMainImage1,
+      </if>
+      <if test="affiliateMainImage2 != null">
+        affiliateMainImage2,
+      </if>
+      <if test="affiliateMainImage3 != null">
+        affiliateMainImage3,
+      </if>
+      <if test="affiliateMainImage4 != null">
+        affiliateMainImage4,
+      </if>
+      <if test="createTime != null">
+        createTime,
+      </if>
+      <if test="updateTime != null">
+        updateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="affiliateDetailNo != null">
+        #{affiliateDetailNo,jdbcType=INTEGER},
+      </if>
+      <if test="affiliateNo != null">
+        #{affiliateNo,jdbcType=INTEGER},
+      </if>
+      <if test="businessNumber != null">
+        #{businessNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="businessItem != null">
+        #{businessItem,jdbcType=VARCHAR},
+      </if>
+      <if test="buisnessName != null">
+        #{buisnessName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessType != null">
+        #{businessType,jdbcType=VARCHAR},
+      </if>
+      <if test="overview != null">
+        #{overview,jdbcType=VARCHAR},
+      </if>
+      <if test="afffiliateNotice != null">
+        #{afffiliateNotice,jdbcType=VARCHAR},
+      </if>
+      <if test="holiday != null">
+        #{holiday,jdbcType=VARCHAR},
+      </if>
+      <if test="openingHours != null">
+        #{openingHours,jdbcType=VARCHAR},
+      </if>
+      <if test="commonWeb != null">
+        #{commonWeb,jdbcType=VARCHAR},
+      </if>
+      <if test="etcLink != null">
+        #{etcLink,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateNews != null">
+        #{affiliateNews,jdbcType=VARCHAR},
+      </if>
+      <if test="etc != null">
+        #{etc,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage1 != null">
+        #{affiliateMainImage1,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage2 != null">
+        #{affiliateMainImage2,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage3 != null">
+        #{affiliateMainImage3,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage4 != null">
+        #{affiliateMainImage4,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.returnp.admin.model.AffiliateDetail">
+    update affiliate_detail
+    <set>
+      <if test="affiliateNo != null">
+        affiliateNo = #{affiliateNo,jdbcType=INTEGER},
+      </if>
+      <if test="businessNumber != null">
+        businessNumber = #{businessNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="businessItem != null">
+        businessItem = #{businessItem,jdbcType=VARCHAR},
+      </if>
+      <if test="buisnessName != null">
+        buisnessName = #{buisnessName,jdbcType=VARCHAR},
+      </if>
+      <if test="businessType != null">
+        businessType = #{businessType,jdbcType=VARCHAR},
+      </if>
+      <if test="overview != null">
+        overview = #{overview,jdbcType=VARCHAR},
+      </if>
+      <if test="afffiliateNotice != null">
+        afffiliateNotice = #{afffiliateNotice,jdbcType=VARCHAR},
+      </if>
+      <if test="holiday != null">
+        holiday = #{holiday,jdbcType=VARCHAR},
+      </if>
+      <if test="openingHours != null">
+        openingHours = #{openingHours,jdbcType=VARCHAR},
+      </if>
+      <if test="commonWeb != null">
+        commonWeb = #{commonWeb,jdbcType=VARCHAR},
+      </if>
+      <if test="etcLink != null">
+        etcLink = #{etcLink,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateNews != null">
+        affiliateNews = #{affiliateNews,jdbcType=VARCHAR},
+      </if>
+      <if test="etc != null">
+        etc = #{etc,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage1 != null">
+        affiliateMainImage1 = #{affiliateMainImage1,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage2 != null">
+        affiliateMainImage2 = #{affiliateMainImage2,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage3 != null">
+        affiliateMainImage3 = #{affiliateMainImage3,jdbcType=VARCHAR},
+      </if>
+      <if test="affiliateMainImage4 != null">
+        affiliateMainImage4 = #{affiliateMainImage4,jdbcType=VARCHAR},
+      </if>
+        updateTime = NOW(),
+    </set>
+    where affiliateDetailNo = #{affiliateDetailNo,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.returnp.admin.model.AffiliateDetail">
+    update affiliate_detail
+    set affiliateNo = #{affiliateNo,jdbcType=INTEGER},
+      businessNumber = #{businessNumber,jdbcType=VARCHAR},
+      businessItem = #{businessItem,jdbcType=VARCHAR},
+      buisnessName = #{buisnessName,jdbcType=VARCHAR},
+      businessType = #{businessType,jdbcType=VARCHAR},
+      overview = #{overview,jdbcType=VARCHAR},
+      afffiliateNotice = #{afffiliateNotice,jdbcType=VARCHAR},
+      holiday = #{holiday,jdbcType=VARCHAR},
+      openingHours = #{openingHours,jdbcType=VARCHAR},
+      commonWeb = #{commonWeb,jdbcType=VARCHAR},
+      etcLink = #{etcLink,jdbcType=VARCHAR},
+      affiliateNews = #{affiliateNews,jdbcType=VARCHAR},
+      etc = #{etc,jdbcType=VARCHAR},
+      affiliateMainImage1 = #{affiliateMainImage1,jdbcType=VARCHAR},
+      affiliateMainImage2 = #{affiliateMainImage2,jdbcType=VARCHAR},
+      affiliateMainImage3 = #{affiliateMainImage3,jdbcType=VARCHAR},
+      affiliateMainImage4 = #{affiliateMainImage4,jdbcType=VARCHAR},
+      updateTime = NOW()
+    where affiliateDetailNo = #{affiliateDetailNo,jdbcType=INTEGER}
+  </update>
+</mapper>
