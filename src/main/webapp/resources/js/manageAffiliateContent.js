@@ -46,9 +46,9 @@ function initView(){
 				if (res.resultCode == "100") {
 					if (res.rows.length > 0) {
 						$('#registerAffiliateDetailForm').form('load',res.rows[0]);
-						reloadPreview(true,res.rows[0].affiliateNo )
+						reloadPreview(true,res.rows[0].affiliateNo, res.rows[0].commonWeb? res.rows[0].commonWeb : null )
 					}else {
-						reloadPreview(true, affiliateNo);
+						reloadPreview(true, affiliateNo,"" );
 						$('#registerAffiliateDetailForm').form('reset');
 						$('#affiliateNo').textbox("setValue", affiliateNo);
 						$('#buisnessName').textbox("setValue", buisnessName);
@@ -123,7 +123,7 @@ function initView(){
 	    	$.messager.alert("알림", res.message);
 	    	if (res.resultCode == "100") {
 	    		$('#registerAffiliateDetailForm').form('load',res.data);
-	    		reloadPreview(true,data.affiliateNo )
+	    		reloadPreview(true,res.data.affiliateNo,res.data.commonWeb? res.data.commonWeb : null )
 	    	}else {
 	    	}
 	    }
@@ -162,15 +162,26 @@ function initView(){
 	});
 }
 
-function reloadPreview(act,affiliateNo){
-	if (act == false){
-		$('#preview').attr('src', "");
-		return;
+function reloadPreview(act,affiliateNo,url){
+	if (url){
+		$('#preview').attr('src', url);
+		
 	}else {
 		$('#preview').attr('src', "");
-		/*$('#preview').attr('src', "http://192.168.123.164:9090/m/affiliate/affiliateDetail.do?affiliateNo=" + affiliateNo);*/
-		$('#preview').attr('src', "https://www.returnp.com/m/affiliate/affiliateDetail.do?affiliateNo=" + affiliateNo);
 	}
+	//if (act == false){
+		//$('#preview').attr('src', "");
+	//	return;
+	//}else {
+	//	$('#preview').attr('src', "");
+	//	if (res != null){
+	//		$('#preview').attr('src', res.rows[0].etcLink);
+	//	}else {
+	//		/*$('#preview').attr('src', "http://192.168.123.164:9090/m/affiliate/affiliateDetail.do?affiliateNo=" + affiliateNo);*/
+				//$('#preview').attr('src', "/m/affiliate/affiliateDetail.do?affiliateNo=" + affiliateNo);
+	//	}
+	
+//	}
 	
 }
 $(function(){
