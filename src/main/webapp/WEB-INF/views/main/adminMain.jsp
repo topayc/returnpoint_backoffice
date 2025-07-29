@@ -390,21 +390,7 @@
 				                </ul>
                             </li> 
                             
-                               <li class = "H manage" data-options = "iconCls :'icon-info'">
-                            	 <span  class = "H manage"  style = "font-weight : bold">푸시 및 메일링 서비스</span>
-		                         <ul>
-   									<li class = "H_1 manage" id = "managePush"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "managePush"  node = "5"  menu_deps= '2' >
-		                        		<span style = "font-weight : bold">디바이스 PUSH </span>
-		                        	</li>
-		                        	<li class = "H_2 manage" id = "manageSms"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "manageSms"  node = "5"  menu_deps= '2' >
-		                        		<span style = "font-weight : bold">SMS/MMS </span></a> 
-		                        	</li>
-		                        	
-		                        	<li class = "H_3 manage" id = "manageEmailing"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "manageEmailing"  node = "5"  menu_deps= '2' >
-		                        		<span style = "font-weight : bold">EMAIL</span></a> 
-		                        	</li>
-		                        </ul>
-                            </li>  
+                               
                             
                             
                              <li class = "I manage" data-options = "iconCls :'icon-info'">
@@ -474,47 +460,24 @@
 		                        </ul>
                             </li>   
                             
-                             <li class = "M manage" data-options = "iconCls :'icon-info'">
-                            	 <span  class = "M manage" style = "font-weight : bold">외부 연동 관리</span>
-		                         <ul>
-		                         	 <li class = "M_1 manage" id="manageApiService" data-options = "iconCls :'icon-info'">
-                        			 	<a class= "sub_menu"  view_req_name = "manageApiService"  menu_deps= '2' >
-                        			 		<span style = "font-weight : bold">연동 API 관리</span>
-                        			 	</a> 
-                        			 </li>
-		                        </ul>
-                            </li>
-                            <li class = "N manage" data-options = "iconCls :'icon-info'">
-                            	 <span class = "N manage"  style = "font-weight : bold">특수 조직 관리</span>
-		                         <ul>
-		                         	<li class = "N_1 manage" id = "manageMembershipRequest"  data-options = "iconCls :'icon-info'">
-		                         		<a class= "sub_menu"  view_req_name = "manageMarketer"  menu_deps= '2' >
-		                         			<span style = "font-weight : bold">마케팅 코드, ID 관리</span>
-		                         		</a> 
-		                         	</li>
-		                        </ul>
-                            </li>
                             
-                             <li class = "O manage" data-options = "iconCls :'icon-info'">
-                            	 <span  class = "O manage"  style = "font-weight : bold">자료 파일 관리</span>
-		                         <ul>
-                          			  <li class = "O_1 manage"  id = "manageNodeFileUpload" data-options = "iconCls :'icon-info'">
-                          			  	<a class= "sub_menu"  view_req_name = "manageUploadFile" menu_deps= '2' >
-                          			  	<span style = "font-weight : bold">노드 파일 업로드/관리</span>
-                          			  	</a> 
-                          			  </li>
-                            		  <li class = "O_2 manage"  id = "managePosPayment" data-options = "iconCls :'icon-info'">
-                            		  	<a class= "sub_menu"  view_req_name = "managePosPayment" menu_deps= '2' >
-                            		  		<span style = "font-weight : bold">VAN 결제 내역 파일 </span>
-                            		  	</a> 
-                            		  </li>
-		                        </ul>
-                            </li>   
-                            
-                                       
-                             <li class = "P manage" data-options = "iconCls :'icon-info'">
+                                  <li class = "P manage" data-options = "iconCls :'icon-info'">
                             	 <span  class = "P manage"  style = "font-weight : bold">상품권 관리</span>
 		                         <ul>
+		                         			<li class = "P_5 manage"  id = "manageGiftCardSalesOrgan" data-options = "iconCls :'icon-info'">
+                            				<a class= "sub_menu"  view_req_name = "manageGiftCardSalesOrgan"  menu_deps= '2' >
+                            					<span style = "font-weight : bold">상품권 판매 조직 관리</span>
+                            				</a> 
+                            			</li>
+                            			
+                            				<li class = "P_4 manage"   id = "manageGiftCardPolicy" data-options = "iconCls :'icon-info'">
+                            				<a class= "sub_menu"  view_req_name = "manageGiftCardPolicy"  menu_deps= '2' >
+                            					<span style = "font-weight : bold">상품권 정책 관리</span>
+                            				</a> 
+                            			</li>
+                            			
+                            			
+                            			
                             			<li class = "P_1"   id = "manageSalesOrganInfo"  class = "10 20 12">
                             				<a class= "sub_menu"  view_req_name = "manageSalesOrganInfo"  menu_deps= '2' >
                             					<span style = "font-weight : bold">상품권 조직 정보</span>
@@ -531,17 +494,8 @@
                             					<span style = "font-weight : bold">상품권 관련 통합 조회</span>
                             				</a> 
                             			</li>
-                            			<li class = "P_4 manage"   id = "manageGiftCardPolicy" data-options = "iconCls :'icon-info'">
-                            				<a class= "sub_menu"  view_req_name = "manageGiftCardPolicy"  menu_deps= '2' >
-                            					<span style = "font-weight : bold">상품권 정책 관리</span>
-                            				</a> 
-                            			</li>
-                            			
-                            			<li class = "P_5 manage"  id = "manageGiftCardSalesOrgan" data-options = "iconCls :'icon-info'">
-                            				<a class= "sub_menu"  view_req_name = "manageGiftCardSalesOrgan"  menu_deps= '2' >
-                            					<span style = "font-weight : bold">상품권 판매 조직 관리</span>
-                            				</a> 
-                            			</li>
+                            		
+                            		
                             			
                             			<li class = "P_6 manage"  id = "manageAffiliate"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "manageAffiliate"  node = "5"  menu_deps= '2' >
 		                        		<span style = "font-weight : bold">상품권 제휴점 관리</span></a> 
@@ -603,6 +557,63 @@
                             			</li>
 		                        </ul>
                             </li> 
+                            
+                            <li class = "H manage" data-options = "iconCls :'icon-info'">
+                            	 <span  class = "H manage"  style = "font-weight : bold">푸시 및 메일링 서비스</span>
+		                         <ul>
+   									<li class = "H_1 manage" id = "managePush"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "managePush"  node = "5"  menu_deps= '2' >
+		                        		<span style = "font-weight : bold">디바이스 PUSH </span>
+		                        	</li>
+		                        	<li class = "H_2 manage" id = "manageSms"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "manageSms"  node = "5"  menu_deps= '2' >
+		                        		<span style = "font-weight : bold">SMS/MMS </span></a> 
+		                        	</li>
+		                        	
+		                        	<li class = "H_3 manage" id = "manageEmailing"  data-options = "iconCls :'icon-info'"><a class= "sub_menu"  view_req_name = "manageEmailing"  node = "5"  menu_deps= '2' >
+		                        		<span style = "font-weight : bold">EMAIL</span></a> 
+		                        	</li>
+		                        </ul>
+                            </li>  
+                            
+                             <li class = "M manage" data-options = "iconCls :'icon-info'">
+                            	 <span  class = "M manage" style = "font-weight : bold">외부 연동 관리</span>
+		                         <ul>
+		                         	 <li class = "M_1 manage" id="manageApiService" data-options = "iconCls :'icon-info'">
+                        			 	<a class= "sub_menu"  view_req_name = "manageApiService"  menu_deps= '2' >
+                        			 		<span style = "font-weight : bold">연동 API 관리</span>
+                        			 	</a> 
+                        			 </li>
+		                        </ul>
+                            </li>
+                            
+                            <li class = "N manage" data-options = "iconCls :'icon-info'">
+                            	 <span class = "N manage"  style = "font-weight : bold">특수 조직 관리</span>
+		                         <ul>
+		                         	<li class = "N_1 manage" id = "manageMembershipRequest"  data-options = "iconCls :'icon-info'">
+		                         		<a class= "sub_menu"  view_req_name = "manageMarketer"  menu_deps= '2' >
+		                         			<span style = "font-weight : bold">마케팅 코드, ID 관리</span>
+		                         		</a> 
+		                         	</li>
+		                        </ul>
+                            </li>
+                            
+                             <li class = "O manage" data-options = "iconCls :'icon-info'">
+                            	 <span  class = "O manage"  style = "font-weight : bold">자료 파일 관리</span>
+		                         <ul>
+                          			  <li class = "O_1 manage"  id = "manageNodeFileUpload" data-options = "iconCls :'icon-info'">
+                          			  	<a class= "sub_menu"  view_req_name = "manageUploadFile" menu_deps= '2' >
+                          			  	<span style = "font-weight : bold">노드 파일 업로드/관리</span>
+                          			  	</a> 
+                          			  </li>
+                            		  <li class = "O_2 manage"  id = "managePosPayment" data-options = "iconCls :'icon-info'">
+                            		  	<a class= "sub_menu"  view_req_name = "managePosPayment" menu_deps= '2' >
+                            		  		<span style = "font-weight : bold">VAN 결제 내역 파일 </span>
+                            		  	</a> 
+                            		  </li>
+		                        </ul>
+                            </li>   
+                            
+                                       
+                       
                             
                         </ul>
                     </li>
