@@ -73,148 +73,156 @@ public interface SearchService {
 	public ArrayList<Policy> findPolicies(Policy policy);
 
 	public ArrayList<Admin> findAdmins(Admin admin);
-	
+
 	public ArrayList<Member> findMembers(Member member);
-	
+
 	public ArrayList<MemberCommand> findMemberCommands(MemberCommand memberCommand);
 
 	public ArrayList<MemberCommand> findMyMemberCommands(MemberCommand memberCommand);
-	
+
 	ArrayList<GreenPointCommand> findGreenPointCommands(GreenPointCommand command);
+
 	public ArrayList<GreenPoint> findGreenPoints(GreenPoint cond);
 
 	ArrayList<RedPointCommand> findRedPointCommands(RedPointCommand command);
+
 	public ArrayList<RedPoint> findRedPoints(RedPoint command);
-	
+
 	public ArrayList<RecommenderCommand> findRecommenderCommands(Recommender recommender);
-	
+
 	public ArrayList<RecommenderCommand2> findRecommenderCommand2s(RecommenderCommand2 recommenderCommander2);
-	
+
 	public ArrayList<Recommender> findRecommenders(Recommender recommender);
-	
+
 	public ArrayList<Branch> findBranches(Branch brach);
-	
+
 	public ArrayList<BranchCommand> findBranchCommands(BranchCommand brach);
-	
+
 	public ArrayList<Agency> findAgencies(Agency agency);
-	
+
 	public ArrayList<AgencyCommand> findAgencyCommands(AgencyCommand agencyCommand);
-	
-	
+
 	public ArrayList<Affiliate> findAffiliates(Affiliate affiliate);
-	
+
 	public ArrayList<AffiliateCommand> findAffiliateCommands(AffiliateCommand affiliateCommand);
-	
+
 	public ArrayList<SaleManager> findSaleManagers(SaleManager saleManager);
 
 	public ArrayList<SaleManagerCommand> findSaleManagerCommands(SaleManagerCommand saleManagerCommand);
-	
+
 	public ArrayList<MembershipRequestCommand> findMembershipRequestCommands(MembershipRequestCommand mrCond);
-	
-	public MembershipRequest  findMembershipRequest(MembershipRequest  membershipRequest);
-	
-	public MembershipRequestCommand findMembershipRequestCommand(MembershipRequestCommand  membershipRequestCommand);
-	
+
+	public MembershipRequest findMembershipRequest(MembershipRequest membershipRequest);
+
+	public MembershipRequestCommand findMembershipRequestCommand(MembershipRequestCommand membershipRequestCommand);
+
 	public ArrayList<CompanyBankAccount> findCompanyBanks(CompanyBankAccount companyBankAccount);
-	
+
 	public ArrayList<PaymentTransaction> findPaymentTransactions(PaymentTransaction record);
 
 	public ArrayList<PaymentTransactionCommand> findPaymentTransactionCommands(PaymentTransactionCommand record);
-	
-	public ArrayList<PaymentPointbackRecordCommand> findPaymentPointbackRecordCommands(PaymentPointbackRecordCommand command);
-	
+
+	public ArrayList<PaymentPointbackRecordCommand> findPaymentPointbackRecordCommands(
+			PaymentPointbackRecordCommand command);
+
 	public ArrayList<SoleDist> findSoleDists(SoleDist record);
 
 	public ArrayList<SoleDistCommand> findSoleDistCommands(SoleDistCommand record);
-	
+
 	public ArrayList<PointConvertRequestCommand> findPointConvertRequestCommands(PointConvertRequestCommand mrCond);
-	
-	public ArrayList<PointConversionTransactionCommand> findPointConversionTransactionCommands(PointConversionTransactionCommand mrCond);
+
+	public ArrayList<PointConversionTransactionCommand> findPointConversionTransactionCommands(
+			PointConversionTransactionCommand mrCond);
+
 	public ArrayList<PointConversionTransaction> findPointConversionTransactions(PointConversionTransaction mrCond);
-	
+
 	public ArrayList<CategoryCommand> findCategoryCommands(CategoryCommand mrCond);
+
 	public ArrayList<Category> findCategories(Category mrCond);
-	
+
 	public int deleteCategory(CategoryCommand command);
-	
-	public ArrayList<PointTransferTransactionCommand> findPointTransferTransactionCommands(PointTransferTransactionCommand mrCond);
-	
+
+	public ArrayList<PointTransferTransactionCommand> findPointTransferTransactionCommands(
+			PointTransferTransactionCommand mrCond);
+
 	public ArrayList<Code> findCodes(Code code);
 
 	public ArrayList<Board> findBoards(Board board);
-	
+
 	public ArrayList<AdminFile> findAdminFiles(AdminFile adminFile);
-	
+
 	public int selectTotalRecords();
-	
+
 	public ArrayList<HashMap<String, Object>> selectDirectNodes(HashMap<String, Object> param);
-	
+
 	public ArrayList<MemberBankAccount> findMemberBankAccounts(MemberBankAccount memberBankAccount);
 
 	public ArrayList<MemberBankAccountCommand> findMemberBankAccountCommands(MemberBankAccount memberBankAccount);
 
 	public ArrayList<PointWithdrawal> findPointWithdrawals(PointWithdrawal pointWithdrawal);
-	
+
 	public ArrayList<PointWithdrawalCommand> findPointWithdrawalCommands(PointWithdrawalCommand pointWithdrawalCommand);
 
 	public ArrayList<HashMap<String, Object>> selectMyTotalPointInfo(MemberCommand memberCommand);
-	
+
 	public int selectMemberCount();
-	
+
 	public ArrayList<HashMap<String, Object>> selectAffiliteSaleReport();
-	
-	public ArrayList<PaymentTransactionCommand> selectOverlapPaymentTransactionCommands(PaymentTransactionCommand record);
-	
+
+	public ArrayList<PaymentTransactionCommand> selectOverlapPaymentTransactionCommands(
+			PaymentTransactionCommand record);
+
 	public ArrayList<GiftCard> selectGiftCards(GiftCard GiftCard);
-	
-	public ArrayList<GiftCardSalesOrgan > selectGiftCardSalesOrgans(GiftCardSalesOrgan record);
-	
+
+	public ArrayList<GiftCardSalesOrgan> selectGiftCardSalesOrgans(GiftCardSalesOrgan record);
+
 	public ArrayList<GiftCardSalesOrganCommand> selectGiftCardSalesOrganCommands(GiftCardSalesOrganCommand record);
-	
+
 	public GiftCardSalesOrganCommand selectGiftCardSalesOrganCommand(GiftCardSalesOrganCommand organ);
 
 	public ArrayList<GiftCardOrderCommand> selectGiftCardOrderCommands(GiftCardOrderCommand record);
 
 	public ArrayList<GiftCardOrderItemCommand> selectGiftCardOrderItemCommands(GiftCardOrderItemCommand record);
-	
+
 	public ArrayList<GiftCardIssueCommand> selectGiftCardIssueCommands(GiftCardIssueCommand record);
 
 	public ArrayList<GiftCardPaymentCommand> selectGiftCardPaymentCommands(GiftCardPaymentCommand record);
-	
+
 	public ArrayList<GiftCardAccHistory> selectGiftCardAccHistories(GiftCardAccHistory record);
 
 	public ArrayList<GiftCardAccHistoryCommand> selectGiftCardAccHistoryCommands(GiftCardAccHistoryCommand record);
 
 	public ArrayList<MemberAddress> selectMemberAddresses(MemberAddress record);
-	
+
 	public ArrayList<AffiliateTidCommand> selectAffilaiteTidCommands(AffiliateTidCommand record);
-	
+
 	public ArrayList<MemberConfig> selectMemberConfigs(MemberConfig memberConfig);
 
 	public ArrayList<PaymentRouter> selectPaymentRouters(PaymentRouter paymentRouter);
 
-	public ArrayList<AffiliatePaymentRouter> selectAffiliatePaymentRouters(AffiliatePaymentRouter affiliatePaymentRouter);
+	public ArrayList<AffiliatePaymentRouter> selectAffiliatePaymentRouters(
+			AffiliatePaymentRouter affiliatePaymentRouter);
 
 	public ArrayList<AffiliateCiderpay> selectAffiliateCiderPays(AffiliateCiderpay affiliateCiderpay);
-	
-	public ArrayList<MemberPlainPassword> selectMemberPlainPasswords(MemberPlainPassword memberPlainPassword);
-	
-	public int selectPaymentTransactionSumForSales(HashMap<String, Object> params);
-	
-	public ArrayList<MainBbs>  selectMainBbses(MainBbs mainBbs);
 
-	public ArrayList<SubBbs>  selectSubBbses(SubBbs subBbs);
-	
+	public ArrayList<MemberPlainPassword> selectMemberPlainPasswords(MemberPlainPassword memberPlainPassword);
+
+	public int selectPaymentTransactionSumForSales(HashMap<String, Object> params);
+
+	public ArrayList<MainBbs> selectMainBbses(MainBbs mainBbs);
+
+	public ArrayList<SubBbs> selectSubBbses(SubBbs subBbs);
+
 	public ArrayList<HashMap<String, Object>> selectGpointPayments(HashMap<String, Object> dbParams);
 
 	public ArrayList<AffiliateDetail> selectAffiliateDetails(AffiliateDetail affiliateDetail);
-	
-	public ArrayList<AffiliateCategory>  selectAffiliateCategories(AffiliateCategory affiliateCategory);
+
+	public ArrayList<AffiliateCategory> selectAffiliateCategories(AffiliateCategory affiliateCategory);
 
 	public ArrayList<HashMap<String, Object>> selectPointCouponPointbackRecords(HashMap<String, Object> dbParams);
 
-	public ArrayList<HashMap<String, Object>>  selectPointCouponTransactions(HashMap<String, Object> dbParams);
-	
+	public ArrayList<HashMap<String, Object>> selectPointCouponTransactions(HashMap<String, Object> dbParams);
+
 	public ArrayList<AffiliateTag> findAffiliateTags(AffiliateTag tag);
-	
+
 }

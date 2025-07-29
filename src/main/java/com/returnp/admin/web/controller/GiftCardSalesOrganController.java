@@ -52,6 +52,7 @@ public class GiftCardSalesOrganController extends ApplicationController{
 	@ResponseBody
 	@RequestMapping(value = "/giftCardSalesOrgans", method = RequestMethod.GET)
 	public ReturnpBaseResponse selectGiftCardSalesOrgans(SearchCondition searchCondition){
+		
 		GiftCardSalesOrganCommand organ = new GiftCardSalesOrganCommand();
 		if (StringUtils.isEmpty(searchCondition.getSearchKeyword())) {
 			searchCondition.setSearchKeyword(null);
